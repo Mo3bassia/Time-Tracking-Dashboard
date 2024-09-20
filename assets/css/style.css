@@ -32,12 +32,16 @@ body {
   background-color: var(--Very-dark-blue);
 }
 
+main {
+  max-width: 65rem;
+
+  width: 95%;
+}
+
 .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
-  width: 90%;
-  max-width: 65rem;
 }
 
 .card {
@@ -154,7 +158,6 @@ body {
   margin-bottom: 10px;
   cursor: pointer;
   transition: 0.3s;
-  width: fit-content;
 }
 
 .main-card .card_desc {
@@ -165,6 +168,10 @@ body {
 .primary-card .choises ul li.active,
 .primary-card .choises ul li:hover {
   color: #fff;
+}
+
+.primary-card .choises ul li {
+  color: var(--Desaturated-blue);
 }
 
 .card .card_title {
@@ -181,6 +188,7 @@ body {
 
 .main-card .card_title img {
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .main-card .card_title img:hover {
@@ -225,5 +233,14 @@ body {
   }
   .title {
     font-size: 35px;
+  }
+}
+
+@media (max-width: 992px) {
+  .card_body {
+    padding: 15px;
+  }
+  .primary-card .card_top {
+    padding-right: 30px;
   }
 }
