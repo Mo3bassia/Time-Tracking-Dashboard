@@ -6,7 +6,7 @@
 }
 
 :root {
-  --Light-red: hsl(15, 100%, 70%); /*(work)*/
+  --Light-orange: hsl(15, 100%, 70%); /*(work)*/
   --Soft-blue: hsl(195, 74%, 62%); /*(play)*/
   --Light-red: hsl(348, 100%, 68%); /*(study)*/
   --Lime-green: hsl(145, 58%, 55%); /*(exercise)*/
@@ -16,6 +16,214 @@
   --Dark-blue: hsl(235, 46%, 20%);
   --Desaturated-blue: hsl(235, 45%, 61%);
   --Pale-Blue: hsl(236, 100%, 87%);
+  --primary-card-bg: hsl(246.22deg 79.61% 59.61%);
+
+  --inactive-color: hsl(236.42deg 26.69% 49.22%);
+
+  --hover-card-bg: hsl(235.77deg 40.57% 34.31%);
 
   --primary-fsize: 18px;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: var(--Very-dark-blue);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  width: 90%;
+  max-width: 65rem;
+}
+
+.card {
+  color: #fff;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card_body {
+  padding: 20px;
+  background-color: var(--Dark-blue);
+  border-radius: 15px;
+  flex: 1;
+  transition: 0.3s;
+}
+
+.card_body:hover {
+  background-color: var(--hover-card-bg);
+}
+
+.card_head {
+  height: 32px;
+  overflow: hidden;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  text-align: end;
+}
+
+.card:nth-of-type(2) {
+  background-color: var(--Light-orange);
+}
+.card:nth-of-type(3) {
+  background-color: var(--Soft-blue);
+}
+.card:nth-of-type(4) {
+  background-color: var(--Light-red);
+}
+.card:nth-of-type(5) {
+  background-color: var(--Lime-green);
+}
+.card:nth-of-type(6) {
+  background-color: var(--Violet);
+}
+.card:nth-of-type(7) {
+  background-color: var(--Soft-orange);
+}
+
+.card_head img {
+  width: 60px;
+  position: relative;
+  bottom: 10px;
+  right: 10px;
+}
+
+.primary-card {
+  grid-row: span 2;
+  background-color: var(--primary-card-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.primary-card .card_top {
+  padding: 30px 60px 20px 20px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.primary-card .card_top img {
+  width: 70px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-bottom: 20px;
+  height: 70px;
+}
+
+.inactive {
+  color: var(--Desaturated-blue);
+}
+
+.small {
+  font-size: 12px;
+}
+
+.title {
+  text-transform: capitalize;
+  font-weight: 300;
+  font-size: 49px;
+  color: #fff;
+}
+
+.primary-card .title {
+  margin-bottom: 40px;
+}
+
+.primary-card .choises {
+  background-color: var(--Dark-blue);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.primary-card .choises ul {
+  list-style: none;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.primary-card .choises ul li {
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: fit-content;
+}
+
+.main-card .card_desc {
+  display: flex;
+  flex-direction: column;
+}
+
+.primary-card .choises ul li.active,
+.primary-card .choises ul li:hover {
+  color: #fff;
+}
+
+.card .card_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card .card_hours {
+  font-size: 40px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.main-card .card_title img {
+  transition: 0.3s;
+}
+
+.main-card .card_title img:hover {
+  filter: brightness(6.5);
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  main {
+    width: 90%;
+  }
+  .primary-card .card_top {
+    align-items: center;
+    padding: 20px;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .primary-card .card_top img {
+    margin: 0;
+  }
+  .primary-card .choises ul {
+    flex-direction: row;
+  }
+  .primary-card .choises ul li {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .primary-card .title {
+    margin-bottom: 0;
+  }
+  .card .card_hours {
+    margin: 0;
+  }
+  .main-card .card_desc {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  .title {
+    font-size: 35px;
+  }
 }
