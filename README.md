@@ -1,6 +1,6 @@
 # Mo3bassia - Time tracking dashboard
 
-This is a solution to the [Bento grid challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw).
+This is a solution to the [Time tracking dashboard challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw).
 
 ## Overview
 
@@ -13,11 +13,14 @@ This is a solution to the [Bento grid challenge on Frontend Mentor](https://www.
 - Solution URL: [here](https://www.frontendmentor.io/solutions/time-tracking-dashboard-ajkQ-0Hd9f)
 - Live Site URL: [here](https://time-tracking-dashboard-mo3bassias-projects.vercel.app)
 
+## My process 🛠
+
 ### Built with
 
-- HTML5
-- Google Fonts
-- Tailwind CSS
-- Javascript
-
-### ���
+- Semantic HTML5 markup
+- CSS custom properties
+- CSS flexbox
+- CSS Grid
+- Mobile-first workflow
+- JavaScript
+- Fetch API (Json File)
